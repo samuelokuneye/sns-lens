@@ -13,7 +13,8 @@
   const whatsappMeta = document.querySelector('meta[name="sns-whatsapp"]');
   const whatsappFloat = document.getElementById("whatsapp-float");
   const contactWhatsapp = document.getElementById("contact-whatsapp");
-  const FORM_ENDPOINT = "https://formsubmit.co/ajax/sammydgreat13@gmail.com";
+  const FORM_ENDPOINT =
+    "https://formsubmit.co/ajax/sammydgreat13@gmail.com,adetolasamson27@gmail.com";
   const WHATSAPP_MESSAGE = encodeURIComponent(
     "Hi SnS Lens, I'd like to enquire about a photography session."
   );
