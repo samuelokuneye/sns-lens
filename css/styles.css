@@ -317,20 +317,22 @@ body:hover .cursor-glow {
   height: 110%;
   max-width: none;
   object-fit: cover;
-  transform: scale(1.12) translate(-3%, -2%);
+  transform: scale(1.12) translate3d(-3%, -2%, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   will-change: transform;
   animation: heroKenBurns 18s ease-in-out infinite alternate;
 }
 
 @keyframes heroKenBurns {
   0% {
-    transform: scale(1.12) translate(-3%, -2%);
+    transform: scale(1.12) translate3d(-3%, -2%, 0);
   }
   50% {
-    transform: scale(1.2) translate(-5%, -3%);
+    transform: scale(1.2) translate3d(-5%, -3%, 0);
   }
   100% {
-    transform: scale(1.14) translate(-1%, -4%);
+    transform: scale(1.14) translate3d(-1%, -4%, 0);
   }
 }
 
@@ -521,6 +523,8 @@ body:hover .cursor-glow {
   align-items: center;
   width: max-content;
   will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .portfolio-strip-set {

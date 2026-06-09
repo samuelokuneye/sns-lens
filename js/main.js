@@ -249,14 +249,20 @@
       let lastTime = 0;
       const loopDuration = 28000;
 
-      portfolioStrip.addEventListener("mouseenter", () => {
-        paused = true;
-        portfolioStrip.classList.add("is-paused");
-      });
+      if (window.matchMedia("(hover: hover)").matches) {
+        portfolioStrip.addEventListener("mouseenter", () => {
+          paused = true;
+          portfolioStrip.classList.add("is-paused");
+        });
 
-      portfolioStrip.addEventListener("mouseleave", () => {
-        paused = false;
-        portfolioStrip.classList.remove("is-paused");
+        portfolioStrip.addEventListener("mouseleave", () => {
+          paused = false;
+          portfolioStrip.classList.remove("is-paused");
+        });
+      }
+
+      document.addEventListener("visibilitychange", () => {
+        paused = document.hidden;
       });
 
       function tick(now) {
@@ -269,7 +275,7 @@
           if (setWidth > 0) {
             offset += (setWidth / loopDuration) * dt;
             if (offset >= setWidth) offset -= setWidth;
-            portfolioTrack.style.transform = "translateX(" + -offset + "px)";
+            portfolioTrack.style.transform = "translate3d(" + -offset + "px, 0, 0)";
           }
         }
 
