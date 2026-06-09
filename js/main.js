@@ -10,9 +10,27 @@
   const galleryItems = document.querySelectorAll(".gallery-item");
   const contactForm = document.getElementById("contact-form");
   const yearEl = document.getElementById("year");
+  const whatsappMeta = document.querySelector('meta[name="sns-whatsapp"]');
+  const whatsappFloat = document.getElementById("whatsapp-float");
+  const contactWhatsapp = document.getElementById("contact-whatsapp");
+  const FORM_ENDPOINT = "https://formsubmit.co/ajax/sammydgreat13@gmail.com";
+  const WHATSAPP_MESSAGE = encodeURIComponent(
+    "Hi SnS Lens, I'd like to enquire about a photography session."
+  );
 
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
+  }
+
+  /* WhatsApp chat — set content on meta[name="sns-whatsapp"] e.g. 447911123456 */
+  const whatsappNumber = (whatsappMeta && whatsappMeta.content || "").replace(/\D/g, "");
+  if (whatsappNumber) {
+    const whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + WHATSAPP_MESSAGE;
+    [whatsappFloat, contactWhatsapp].forEach((el) => {
+      if (!el) return;
+      el.href = whatsappUrl;
+      el.hidden = false;
+    });
   }
 
   /* Fallback for broken remote images */
@@ -165,13 +183,19 @@
     });
   });
 
-  /* Contact form */
+  /* Contact form → FormSubmit */
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const successMsg = document.getElementById("form-success");
+    const errorMsg = document.getElementById("form-error");
 
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const successMsg = document.getElementById("form-success");
+    if (new URLSearchParams(window.location.search).get("sent") === "1" && successMsg) {
+      successMsg.hidden = false;
+      window.history.replaceState({}, "", window.location.pathname + "#contact");
+    }
+
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
       if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
@@ -180,18 +204,32 @@
 
       submitBtn.classList.add("loading");
       submitBtn.disabled = true;
+      if (errorMsg) errorMsg.hidden = true;
+      if (successMsg) successMsg.hidden = true;
 
-      setTimeout(() => {
-        submitBtn.classList.remove("loading");
-        submitBtn.disabled = false;
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (!response.ok) {
+          throw new Error("Form submit failed");
+        }
+
         contactForm.reset();
         if (successMsg) {
           successMsg.hidden = false;
-          setTimeout(() => {
-            successMsg.hidden = true;
-          }, 5000);
         }
-      }, 1500);
+      } catch (err) {
+        if (errorMsg) errorMsg.hidden = false;
+      } finally {
+        submitBtn.classList.remove("loading");
+        submitBtn.disabled = false;
+      }
     });
   }
 
