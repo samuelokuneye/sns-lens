@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SnS Lens — Professional photography capturing moments with excellence. Weddings, portraits, events, and commercial work." />
+  <title>SnS Lens | Capturing Moments with Excellence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#top" class="logo" aria-label="SnS Lens home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="24" cy="24" r="5" fill="currentColor"/>
+            <path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-name">SnS Lens</span>
+          <span class="logo-tag">Photography</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg">
+        <img
+          src="https://images.unsplash.com/photo-1719499683843-721331f2495f?w=1920&q=80"
+          alt=""
+          class="hero-image"
+          fetchpriority="high"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">Professional Photography</p>
+        <h1 id="hero-heading" class="hero-title reveal">
+          <span class="hero-line">Capturing</span>
+          <span class="hero-line hero-line--accent">Moments</span>
+          <span class="hero-line">with Excellence</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Timeless imagery for weddings, portraits, and life's most meaningful occasions — crafted with precision and artistry.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary">View Portfolio</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+
+      <aside class="hero-stats reveal" aria-label="Studio highlights">
+        <div class="stat">
+          <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Sessions Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="8">0</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Weddings</span><span class="marquee-dot">◆</span>
+        <span>Portraits</span><span class="marquee-dot">◆</span>
+        <span>Events</span><span class="marquee-dot">◆</span>
+        <span>Commercial</span><span class="marquee-dot">◆</span>
+        <span>Editorial</span><span class="marquee-dot">◆</span>
+        <span>Corporate</span><span class="marquee-dot">◆</span>
+        <span>Maternity</span><span class="marquee-dot">◆</span>
+        <span>Pre-Wedding</span><span class="marquee-dot">◆</span>
+        <span>Weddings</span><span class="marquee-dot">◆</span>
+        <span>Portraits</span><span class="marquee-dot">◆</span>
+        <span>Events</span><span class="marquee-dot">◆</span>
+        <span>Commercial</span><span class="marquee-dot">◆</span>
+        <span>Editorial</span><span class="marquee-dot">◆</span>
+        <span>Corporate</span><span class="marquee-dot">◆</span>
+        <span>Maternity</span><span class="marquee-dot">◆</span>
+        <span>Pre-Wedding</span><span class="marquee-dot">◆</span>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-heading">
+      <div class="section-header">
+        <p class="section-eyebrow reveal">Selected Work</p>
+        <h2 id="work-heading" class="section-title reveal">Stories in Light</h2>
+        <p class="section-desc reveal">
+          Every frame is intentional — composed, lit, and edited to preserve the emotion of the moment.
+        </p>
+      </div>
+
+      <div class="gallery-filters reveal" role="tablist" aria-label="Filter gallery">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="prewedding" role="tab" aria-selected="false">Pre-Wedding</button>
+        <button class="filter-btn" data-filter="wedding" role="tab" aria-selected="false">Weddings</button>
+        <button class="filter-btn" data-filter="portrait" role="tab" aria-selected="false">Portraits</button>
+        <button class="filter-btn" data-filter="corporate" role="tab" aria-selected="false">Corporate</button>
+        <button class="filter-btn" data-filter="maternity" role="tab" aria-selected="false">Maternity</button>
+        <button class="filter-btn" data-filter="event" role="tab" aria-selected="false">Events</button>
+      </div>
+
+      <div class="gallery">
+        <article class="gallery-item gallery-item--wide reveal" data-category="prewedding">
+          <img src="https://images.unsplash.com/photo-1551963071-f21314365855?w=1200&q=80" alt="Black couple in elegant pre-wedding portrait attire" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Pre-Wedding</span>
+            <h3>Before the Vows</h3>
+          </div>
+        </article>
+        <article class="gallery-item gallery-item--tall reveal" data-category="prewedding">
+          <img src="https://images.unsplash.com/photo-1535428245347-3ab06a1b100a?w=800&q=80" alt="Couple in formal tuxedo and gown pre-wedding session" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Pre-Wedding</span>
+            <h3>Two Hearts, One Story</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="prewedding">
+          <img src="https://images.unsplash.com/photo-1621829845053-c8114fc01eb3?w=800&q=80" alt="Husband and wife-to-be in white formal wear outdoors" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Pre-Wedding</span>
+            <h3>Countdown to Forever</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="prewedding">
+          <img src="https://images.unsplash.com/photo-1529519195486-16945f0fb37f?w=800&q=80" alt="Engaged couple holding hands in pre-wedding shoot" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Pre-Wedding</span>
+            <h3>Held by Love</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1606217239582-d9f72323bcd7?w=800&q=80" alt="Black bride and groom on their wedding day" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Wedding</span>
+            <h3>Golden Hour Vows</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1719499683843-721331f2495f?w=800&q=80" alt="Bride and groom sharing a tender wedding kiss" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Wedding</span>
+            <h3>Sealed with Love</h3>
+          </div>
+        </article>
+        <article class="gallery-item gallery-item--wide reveal" data-category="wedding">
+          <img src="https://images.unsplash.com/photo-1745231991466-19d41014cc66?w=1200&q=80" alt="Wedding couple embracing with joy and affection" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Wedding</span>
+            <h3>Forever Begins</h3>
+          </div>
+        </article>
+        <article class="gallery-item gallery-item--tall reveal" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Black woman portrait with confident warm expression" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Portrait</span>
+            <h3>Quiet Confidence</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=800&q=80" alt="Black man professional portrait with natural light" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Portrait</span>
+            <h3>Authentic Gaze</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1614804471619-50084aff54bd?w=800&q=80" alt="Black executive in tailored blazer corporate headshot" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Corporate</span>
+            <h3>Boardroom Ready</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=800&q=80" alt="Black professional woman in corporate blazer headshot" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Corporate</span>
+            <h3>Leadership Portrait</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Black man in formal suit official headshot" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Corporate</span>
+            <h3>Executive Presence</h3>
+          </div>
+        </article>
+        <article class="gallery-item gallery-item--wide reveal" data-category="maternity">
+          <img src="https://images.unsplash.com/photo-1530572169373-9f6ec500f5a9?w=1200&q=80" alt="Black expecting mother holding her belly outdoors" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Maternity</span>
+            <h3>A New Chapter</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="maternity">
+          <img src="https://images.unsplash.com/photo-1710897869539-a48e3d69a8d7?w=800&q=80" alt="Black woman maternity portrait in natural light" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Maternity</span>
+            <h3>Growing Love</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="maternity">
+          <img src="https://images.unsplash.com/photo-1544784179-ae1535e9f013?w=800&q=80" alt="Black mother-to-be side profile maternity session" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Maternity</span>
+            <h3>Bloom &amp; Grace</h3>
+          </div>
+        </article>
+        <article class="gallery-item reveal" data-category="event">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80" alt="Professional team at a corporate event" loading="lazy" />
+          <div class="gallery-caption">
+            <span class="gallery-category">Event</span>
+            <h3>On Stage</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="services-inner">
+        <div class="section-header section-header--left">
+          <p class="section-eyebrow reveal">What We Offer</p>
+          <h2 id="services-heading" class="section-title reveal">Crafted for Every Occasion</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <span class="service-number">01</span>
+            <h3>Wedding Photography</h3>
+            <p>From intimate ceremonies to grand celebrations — plus romantic pre-wedding sessions for couples ready to tell their love story before the big day.</p>
+            <ul class="service-features">
+              <li>Pre-wedding &amp; engagement shoots</li>
+              <li>Full-day wedding coverage</li>
+              <li>Premium album design</li>
+            </ul>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-number">02</span>
+            <h3>Portrait Sessions</h3>
+            <p>Individual, couple, and family portraits — plus official corporate headshots in suit attire and beautiful maternity sessions that celebrate new life.</p>
+            <ul class="service-features">
+              <li>Corporate & executive headshots</li>
+              <li>Maternity & pregnancy sessions</li>
+              <li>Studio, outdoor & digital delivery</li>
+            </ul>
+          </article>
+          <article class="service-card reveal">
+            <span class="service-number">03</span>
+            <h3>Events & Commercial</h3>
+            <p>Corporate events, product launches, and brand campaigns — polished imagery that elevates your professional presence.</p>
+            <ul class="service-features">
+              <li>Corporate events</li>
+              <li>Brand campaigns</li>
+              <li>Fast turnaround options</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" aria-label="Brand philosophy">
+      <blockquote class="quote-block reveal">
+        <p>"A photograph is the pause button of life. We don't just take pictures — we preserve the feeling."</p>
+        <footer>— SnS Lens Philosophy</footer>
+      </blockquote>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="images/about-photographer.jpg" alt="Black photographer at work with a professional camera" loading="lazy" />
+          <div class="about-image-frame"></div>
+        </div>
+        <div class="about-content">
+          <p class="section-eyebrow reveal">About SnS Lens</p>
+          <h2 id="about-heading" class="section-title reveal">Where Vision Meets Craft</h2>
+          <p class="about-text reveal">
+            SnS Lens was founded on a simple belief: every moment deserves to be seen at its finest. With a keen eye for composition, mastery of natural and artificial light, and a commitment to genuine connection with our clients, we transform fleeting instants into lasting art.
+          </p>
+          <p class="about-text reveal">
+            Whether it's the quiet tear at a wedding altar or the confident gaze in a boardroom portrait, we approach each session with the same dedication to excellence that defines our mantra.
+          </p>
+          <div class="about-values reveal">
+            <div class="value">
+              <strong>Excellence</strong>
+              <span>Uncompromising quality in every deliverable</span>
+            </div>
+            <div class="value">
+              <strong>Authenticity</strong>
+              <span>Real moments, never forced poses</span>
+            </div>
+            <div class="value">
+              <strong>Artistry</strong>
+              <span>Editorial-grade composition & editing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-inner">
+        <div class="contact-info">
+          <p class="section-eyebrow reveal">Let's Create Together</p>
+          <h2 id="contact-heading" class="section-title reveal">Book Your Session</h2>
+          <p class="contact-desc reveal">
+            Ready to capture your next chapter? Tell us about your vision and we'll craft a package tailored to you.
+          </p>
+
+          <div class="contact-details reveal">
+            <a href="mailto:hello@snlens.com" class="contact-link">
+              <span class="contact-link-label">Email</span>
+              <span>hello@snlens.com</span>
+            </a>
+            <a href="tel:+441234567890" class="contact-link">
+              <span class="contact-link-label">Phone</span>
+              <span>+44 123 456 7890</span>
+            </a>
+            <div class="contact-link">
+              <span class="contact-link-label">Studio</span>
+              <span>Available by appointment</span>
+            </div>
+          </div>
+
+          <div class="social-links reveal">
+            <a href="https://www.instagram.com/sns_lens?igsh=Z2hrNjRmMmFveDJs&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Follow SnS Lens on Instagram @sns_lens">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              @sns_lens
+            </a>
+            <a href="https://www.tiktok.com/@sns_lens?_r=1&_t=ZN-974JY7lUpfy" target="_blank" rel="noopener noreferrer" aria-label="Follow SnS Lens on TikTok @sns_lens">
+              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.16 8.16 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg>
+              @sns_lens
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Type</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="prewedding">Pre-Wedding / Engagement</option>
+              <option value="wedding">Wedding Photography</option>
+              <option value="portrait">Portrait Session</option>
+              <option value="corporate">Corporate / Headshots</option>
+              <option value="maternity">Maternity Session</option>
+              <option value="event">Event / Commercial</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your project</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Date, location, and any details you'd like to share..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Send Inquiry</span>
+            <span class="btn-loading" aria-hidden="true">Sending...</span>
+          </button>
+          <p class="form-success" id="form-success" role="status" hidden>
+            Thank you! We'll be in touch within 24 hours.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="#top" class="footer-logo">SnS Lens</a>
+      <p class="footer-mantra">Capturing moments with excellence</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/sns_lens?igsh=Z2hrNjRmMmFveDJs&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <span class="footer-social-dot" aria-hidden="true">·</span>
+        <a href="https://www.tiktok.com/@sns_lens?_r=1&_t=ZN-974JY7lUpfy" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> SnS Lens. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
