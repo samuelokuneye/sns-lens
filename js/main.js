@@ -235,6 +235,51 @@
     });
   }
 
+  /* Portfolio strip — JS-driven scroll (reliable across browsers) */
+  const portfolioStrip = document.querySelector(".portfolio-strip");
+  const portfolioTrack = document.getElementById("portfolio-strip-track");
+  const portfolioSet = portfolioTrack && portfolioTrack.querySelector(".portfolio-strip-set");
+
+  if (portfolioStrip && portfolioTrack && portfolioSet) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!reduceMotion) {
+      let offset = 0;
+      let paused = false;
+      let lastTime = 0;
+      const loopDuration = 28000;
+
+      portfolioStrip.addEventListener("mouseenter", () => {
+        paused = true;
+        portfolioStrip.classList.add("is-paused");
+      });
+
+      portfolioStrip.addEventListener("mouseleave", () => {
+        paused = false;
+        portfolioStrip.classList.remove("is-paused");
+      });
+
+      function tick(now) {
+        if (!lastTime) lastTime = now;
+        const dt = now - lastTime;
+        lastTime = now;
+
+        if (!paused) {
+          const setWidth = portfolioSet.offsetWidth;
+          if (setWidth > 0) {
+            offset += (setWidth / loopDuration) * dt;
+            if (offset >= setWidth) offset -= setWidth;
+            portfolioTrack.style.transform = "translateX(" + -offset + "px)";
+          }
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
+    }
+  }
+
   /* Smooth anchor offset for fixed header */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
